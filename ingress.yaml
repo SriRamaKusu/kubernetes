@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-yaml
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /employeeProfileInfo
+        backend:
+          serviceName: employeeProfileInfo-service
+          servicePort: 60001

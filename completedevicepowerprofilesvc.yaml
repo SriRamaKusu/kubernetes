@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: employeeProfileInfo-service
+spec:
+  type: ClusterIP
+  selector:
+    author: srirama
+    image: service
+  ports:
+  - protocol: TCP
+    port: 60001
+    targetPort: 7999

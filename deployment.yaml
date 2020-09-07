@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-yaml
+spec:
+  selector:
+    matchLabels:
+      author: srirama
+      image: service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        author: srirama
+        image: service
+    spec:
+      containers:
+      - name: containername
+        image: repositoryhost/imagename:tagname
+        env:
+        - name: "PORT"
+          value: "7999"
